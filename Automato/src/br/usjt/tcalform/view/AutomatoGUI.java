@@ -17,7 +17,7 @@ import br.usjt.tcalform.controller.AutomatoController;
 
 public class AutomatoGUI extends JFrame implements ActionListener {
 	private JButton bAdd1R, bAdd2R, bAdd5R, bDoceA, bDoceB, bDoceC, bDevolver;
-	private JPanel pEsquerda, pCentro2, pDireita;
+	private JPanel pEsquerda, pCentro2;
 	private JTextArea taMonitor;
 	private JScrollPane spMonitor;
 
@@ -62,7 +62,8 @@ public class AutomatoGUI extends JFrame implements ActionListener {
 		pCentro2.add(bDoceC);
 
 		taMonitor = new JTextArea();
-		spMonitor = new JScrollPane(taMonitor);
+		taMonitor.setEditable(false);
+		spMonitor = new JScrollPane(taMonitor);		
 		spMonitor.setBorder(new EmptyBorder(10, 0, 10, 10));
 
 		pEsquerda.add(pCentro2, BorderLayout.CENTER);
